@@ -1,0 +1,12 @@
+{
+  "name": "grapgql_exploring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/expjazz/grapgql_exploring.git",
+  "author": "Expedito Andrade <expeditojazz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "apollo-server": "^2.16.1",
+    "graphql": "^15.3.0"
+  }
+}

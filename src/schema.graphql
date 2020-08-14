@@ -1,15 +1,31 @@
 type Query {
   allCurriculums: [Curriculum]
   users: [User]
+  allJobs: [Job]
+  currentCurriculum(curriculumId: Int): Curriculum
 }
 
 type Mutation {
   signUp(email: String, firstName: String, lastName: String, password: String): User
+  createCurriculum(candidateId: Int, aboutMe: String, pastJobs: [createJobInput]): Curriculum
+}
+
+
+input createJobInput {
+  start: String!
+  finish: String 
 }
 
 type Curriculum {
   candidate: User
   aboutMe: String
+  pastJobs: [Job]
+}
+
+type Job {
+  start: String!
+  finish: String 
+  curriculum: Curriculum
 }
 
 type User {
@@ -18,4 +34,5 @@ type User {
   lastName: String
   email: String
 }
+
 

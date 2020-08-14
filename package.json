@@ -6,6 +6,8 @@
   "author": "Expedito Andrade <expeditojazz@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@prisma/cli": "^2.4.1",
+    "@prisma/client": "^2.4.1",
     "apollo-server": "^2.16.1",
     "eslint-config-airbnb-base": "14.1.x",
     "eslint-plugin-import": "2.20.x",

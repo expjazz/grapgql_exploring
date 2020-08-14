@@ -5,11 +5,15 @@ const jwt = require('jsonwebtoken');
 const { GraphQLServer } = require('graphql-yoga');
 const Mutation = require('./resolvers/Mutation');
 const Query = require('./resolvers/Query');
+const Curriculum = require('./resolvers/Curriculum');
+const User = require('./resolvers/User');
 require('dotenv').config();
 
 const resolvers = {
   Query,
   Mutation,
+  Curriculum,
+  User,
 };
 
 const opts = {

@@ -2,11 +2,13 @@
 const { PrismaClient } = require('@prisma/client');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
-
-const { GraphQLServer } = require('graphql-yoga'); const Query = require('./resolvers/Query');
+const { GraphQLServer } = require('graphql-yoga');
+const Mutation = require('./resolvers/Mutation');
+const Query = require('./resolvers/Query');
 
 const resolvers = {
   Query,
+  Mutation,
 };
 
 const opts = {
@@ -29,7 +31,7 @@ server.express.use(cookieParser());
 server.express.use((req, res, next) => {
   const { token } = req.cookies;
   if (token) {
-    const { userId } = jwt.verify(token, APP_SECRET);
+    const { userId } = jwt.verify(token, process.env.APP_SECRET);
     req.userId = userId;
   }
   next();

@@ -38,4 +38,4 @@ server.express.use((req, res, next) => {
 });
 
 // The `listen` method launches a web server.
-server.start(opts, (deets) => console.log(`server is running on ${deets.port}`));
+server.start(opts, (deets) => console.log(`HA${process.env.APP_SECRET} HA`));

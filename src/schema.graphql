@@ -8,6 +8,12 @@ type Query {
 type Mutation {
   signUp(email: String, firstName: String, lastName: String, password: String): User
   createCurriculum(candidateId: Int, aboutMe: String, pastJobs: [createJobInput]): Curriculum
+  login(email: String!, password: String!): User!
+  signOut: SuccessMessage
+}
+
+type SuccessMessage {
+  message: String
 }
 
 

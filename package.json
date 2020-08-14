@@ -11,9 +11,12 @@
   "dependencies": {
     "@prisma/cli": "^2.4.1",
     "@prisma/client": "^2.4.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.5",
     "eslint-config-airbnb-base": "14.1.x",
     "eslint-plugin-import": "2.20.x",
     "express-graphql": "^0.11.0",
-    "graphql-yoga": "^1.18.3"
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1"
   }
 }

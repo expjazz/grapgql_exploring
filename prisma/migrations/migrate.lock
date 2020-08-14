@@ -1,3 +1,4 @@
 # Prisma Migrate lockfile v1
 
 20200814115228-initialize-table-with-users-curriculum
+20200814145045-add-password-to-user

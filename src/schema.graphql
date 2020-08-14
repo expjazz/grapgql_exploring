@@ -3,6 +3,10 @@ type Query {
   users: [User]
 }
 
+type Mutation {
+  signUp(email: String, firstName: String, lastName: String, password: String): User
+}
+
 type Curriculum {
   candidate: User
   aboutMe: String

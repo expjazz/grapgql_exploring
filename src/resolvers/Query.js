@@ -4,7 +4,7 @@ const currentUser = (parent, args, context) => {
   if (!context.request.userId) {
     return null;
   }
-  return context.prisma.findOne({
+  return context.prisma.user.findOne({
     where: { id: context.request.userId },
   });
 };

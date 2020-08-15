@@ -3,6 +3,7 @@ type Query {
   users: [User]
   allJobs: [Job]
   currentCurriculum(curriculumId: Int): Curriculum
+  currentUser: User
 }
 
 type Mutation {

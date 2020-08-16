@@ -25,13 +25,15 @@ const createCurriculum = async (parent, args, context) => {
       candidate: { connect: { id: args.candidateId } },
     },
   });
-  const newJob = await context.prisma.job.create({
-    data: {
-      start: args.pastJobs[0].start,
-      finish: args.pastJobs[0].finish,
-      curriculum: { connect: { id: newCurriculum.id } },
+  args.pastJobs.forEach(async (pastJob) => {
+    await context.prisma.job.create({
+      data: {
+        start: pastJob.start,
+        finish: pastJob.finish,
+        curriculum: { connect: { id: newCurriculum.id } },
 
-    },
+      },
+    });
   });
   return newCurriculum;
 };
